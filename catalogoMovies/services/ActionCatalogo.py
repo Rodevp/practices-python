@@ -1,3 +1,5 @@
+import os
+
 class MovieService :
 
     @staticmethod
@@ -14,6 +16,9 @@ class MovieService :
 
     @staticmethod
     def delete_catalogo() :
-        pass
+        try :
+            os.remove("catalogo.txt")
+        except OSError as error :
+            print("Ha ocurrido un erro: ", error)
 
 
