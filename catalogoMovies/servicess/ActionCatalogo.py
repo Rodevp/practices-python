@@ -1,11 +1,13 @@
 import os
+from domain.Movie import Movie
 
 class MovieService :
 
     @staticmethod
     def add_movie_catalogo(name_movie) :
+        movie = Movie(name_movie)
         file = open("catalogo.txt", "w")
-        file.write(f"{name_movie}\n")
+        file.write(f"{ movie.get_name_movie() }\n")
 
     @staticmethod
     def list_movie_catalogo() :
