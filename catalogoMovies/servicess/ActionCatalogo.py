@@ -5,16 +5,23 @@ class MovieService :
 
     @staticmethod
     def add_movie_catalogo(name_movie) :
-        movie = Movie(name_movie)
-        file = open("catalogo.txt", "w")
-        file.write(f"{ movie.get_name_movie() }\n")
+        try :
+            movie = Movie(name_movie)
+            file = open("catalogo.txt", "w")
+            file.write(f"{ movie.get_name_movie() }\n")
+        except OSError as error :
+            print("Upas, un error 💀")
+
 
     @staticmethod
     def list_movie_catalogo() :
-        file = open("catalogo.txt", "r")
-        for line_movie in file :
-            print(f"{line_movie}\n")
-        
+        try :
+            file = open("catalogo.txt", "r")
+            for line_movie in file :
+                print(f"{line_movie}\n")
+        except OSError as error :
+            print("Upss, no tienes pelis 👀")
+            
 
     @staticmethod
     def delete_catalogo() :

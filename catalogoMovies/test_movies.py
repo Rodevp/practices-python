@@ -2,12 +2,12 @@ from servicess.ActionCatalogo import MovieService
 
 class  Main :
     __template = """
-        ----Catalogo De Peliculas🖥----\n
-        - Elige tu opcion:\n
-        1. Agregar Pelicula\n
-        2. Listar peliculas\n
-        3. Eliminar catalogo\n
-        4. Salir\n 
+    ----Catalogo De Peliculas🖥----\n
+    - Elige tu opcion:\n
+    1. Agregar Pelicula\n
+    2. Listar peliculas\n
+    3. Eliminar catalogo\n
+    4. Salir\n 
     """
 
     def __init__(self) -> None:
