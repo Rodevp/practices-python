@@ -7,7 +7,10 @@ class MovieService :
 
     @staticmethod
     def list_movie_catalogo() :
-        pass
+        file = open("catalogo.txt", "r")
+        for line_movie in file :
+            print(f"{line_movie}\n")
+        
 
     @staticmethod
     def delete_catalogo() :
