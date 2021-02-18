@@ -15,17 +15,20 @@ class  Main :
 
     def main(self) :
         while True :
-            option = input(self.__template)
-            if option == "1" :
-                name_movie = input("Nombre de pelicula: ")
-                MovieService.add_movie_catalogo(name_movie)
-            if option == "2" :
-                MovieService.list_movie_catalogo()
-            if option == "3" :
-                MovieService.delete_catalogo()
-            if option == "4" :
-                print("Bye ✌")
-                break
+            try:
+                option = input(self.__template)
+                if option == "1" :
+                    name_movie = input("Nombre de pelicula: ")
+                    MovieService.add_movie_catalogo(name_movie)
+                if option == "2" :
+                    MovieService.list_movie_catalogo()
+                if option == "3" :
+                    MovieService.delete_catalogo()
+                if option == "4" :
+                    print("Bye ✌")
+                    break
+            except TypeError :
+                print("No es una opcion valida 👨‍💻")
 
 
 app = Main()
